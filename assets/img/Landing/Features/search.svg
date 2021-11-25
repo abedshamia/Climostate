@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Best Prices v2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Best-Prices-v2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <polygon id="Stroke-559" stroke="#3d1543" stroke-width="2" points="24.9902 20.9871 41.0602 20.9871 33.0252 27.9461 24.9902 34.9041 16.9552 27.9461 8.9202 20.9871"></polygon>
+        <polygon id="Stroke-560" stroke="#3d1543" stroke-width="2" points="36.2354 14.7518 13.7444 14.7518 8.9204 20.9868 41.0604 20.9868"></polygon>
+        <line x1="13.7441" y1="14.7518" x2="24.9901" y2="34.9038" id="Stroke-561" stroke="#3d1543" stroke-width="2"></line>
+        <line x1="36.2354" y1="14.7518" x2="24.9904" y2="34.9038" id="Stroke-562" stroke="#3d1543" stroke-width="2"></line>
+        <polyline id="Stroke-563" stroke="#3d1543" stroke-width="2" points="32.7559 20.9871 24.9899 14.7521 17.2239 20.9871"></polyline>
+        <g id="Group-572" transform="translate(4.000000, 1.000000)" stroke="#3d1543" stroke-width="2">
+            <path d="M29.3193,2.4168 C27.6673,1.6448 25.8813,1.0848 23.9913,0.7778 C12.9873,-1.0062 2.6203,6.4678 0.8353,17.4718 C-0.9497,28.4758 6.5243,38.8438 17.5293,40.6278 C28.5333,42.4118 38.9003,34.9378 40.6843,23.9348 C41.3033,20.1168 40.8083,16.3758 39.4383,13.0428" id="Stroke-564"></path>
+            <path d="M36.7939,8.4402 C35.6049,6.8842 34.1899,5.5002 32.5869,4.3402" id="Stroke-566"></path>
+            <line x1="33.1758" y1="36.618" x2="37.3758" y2="42.003" id="Stroke-568"></line>
+            <polygon id="Stroke-570" points="54.0996 57.9334 48.7596 62.0994 34.7056 44.0844 40.0456 39.9194"></polygon>
+        </g>
+    </g>
+</svg>
