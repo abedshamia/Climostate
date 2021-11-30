@@ -1,8 +1,9 @@
-// my code
 let country = localStorage.getItem("country");
 console.log(country)
 const containerDiv = document.getElementsByClassName("h-photo")[0];
 
+
+//an API displays a photo of the selected country
 const pixaKey = "24477339-22b8ee8a367b2cdaebd16eb69";
 const pixaAPI = fetch(
   `https://pixabay.com/api/?key=${pixaKey}&q=${country}&image_type=photo&pretty=true&imageHeight=1080&imageWidth=1920`
@@ -21,6 +22,7 @@ const pixaAPI = fetch(
     containerDiv.appendChild(photo);
   });
 
+  //an API gives the official name of the country
 const countryAPI = fetch(`https://restcountries.com/v3.1/name/${country}`)
   .then((res) => {
     if (res.status !== 200) {
