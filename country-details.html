@@ -4,34 +4,50 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Document</title>
     <link rel="stylesheet" href="css/country.css" />
   </head>
   <body>
     <header class="header">
-        <nav class="main-nav">
-          <img src="assets/img/Logo/Group 4.svg" class="logo" alt="logo" />
-          <a href="#" class="menu"><i class="fas fa-bars"></i></a>
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="#" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Features</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Testimonials</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Explore</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Contact</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-  
+      <nav class="main-nav">
+        <img src="assets/img/Logo/Group 4.svg" class="logo" alt="logo" />
+        <a href="#" class="menu"><i class="fas fa-bars"></i></a>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Features</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Explore</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
     <main>
       <section id="country">
         <div>
@@ -39,66 +55,97 @@
           <h1 id="official-name">Frensh Republic</h1>
         </div>
         <div id="country-details">
-            <div class="allign-item">
-            <div>
-            <h1 id="name">France</h1>
-            <h2 id="continent">Europe</h2>
-        </div>
-        <img src="assets/img/Country-Details/Country_Card/flag.png" id="flag">
-    </div>
-    <div class="info-grid">
-          <p class="emoji">👫</p>
-          <p id="population">81.8M People</p>
-          <p class="emoji">🗣</p>
-          <p id="lang">French</p>
-          <p class="emoji">💰</p>
-          <p id="currency">Euro</p>
-          <p class="emoji">⛅</p>
-          <p id="now-weather">Clear</p>
-        </div>
+          <div class="allign-item">
+            <div class="mq-margin">
+              <h1 id="name">France</h1>
+              <h2 id="continent">Europe</h2>
+            </div>
+            <img
+              src="assets/img/Country-Details/Country_Card/flag.png"
+              id="flag"
+            />
+          </div>
+          <div class="info-grid">
+            <p class="emoji">👫</p>
+            <p id="population">81.8M People</p>
+            <p class="emoji">🗣</p>
+            <p id="lang">French</p>
+            <p class="emoji">💰</p>
+            <p id="currency">Euro</p>
+            <p class="emoji">⛅</p>
+            <p id="now-weather">Clear</p>
+            <br />
+          </div>
         </div>
       </section>
-      <!-- <section id="weather">
-            <div id="overlay">
-          <img
-            src="assets/img/Country-Details/unsplash_54RtibmHH28.png"
-            id="city-photo" alt="country"
-          />
-          <h1 class="z">new york ***********</h1>
-          <img src="assets/img/Country-Details/Vector 3.png" class="z" />
-          <img src="assets/img/Country-Details/bi_wind.png" class="z" alt="" />
-          <p class="z">8 MPH</p>
-          <h2 class="z">35°</h2>
-          <img
-            src="assets/img/Country-Details/carbon_mostly-cloudy.png"
-            alt="" class="z"
-          />
+      <section id="weather">
+        <div id="overlay">
+          <div class="horizantal-flex">
+            <div>
+              <select
+                class="margin-inside-the-box"
+                name=""
+                id="cities"
+                name="cities"
+              >
+                <option value="New York">New York</option>
+                <option value="Los Angelos">Los Angelos</option>
+                <option value="San Andreas">San Andreas</option>
+                <option value="Las Vegas">Las Vegas</option></select
+              ><br />
+              <img
+                class="margin-inside-the-box dash"
+                src="assets/img/Country-Details/Vector 3.png"
+              />
+              <p id="current-state" class="margin-inside-the-box">CLOUDY</p>
+
+              <div id="wind-speed">
+                <img
+                  class="margin-inside-the-box wind"
+                  src="assets/img/Country-Details/bi_wind.png"
+                  alt=""
+                />
+                <p id="wind">8 MPH</p>
+              </div>
+            </div>
+            <div>
+              <h2 id="temp" class="margin-inside-the-box">35°</h2>
+            </div>
+          </div>
+          <div>
+            <img
+              src="assets/img/Country-Details/carbon_mostly-cloudy.png"
+              alt=""
+              class="now-state-img"
+            />
+          </div>
         </div>
         <div id="days-card">
-          <div>
-            <p>day 1</p>
+          <div class="day-weather">
+            <p class="days">day 1</p>
             <img
-              src="assets/img/Country-Details/carbon_mostly-cloudy.png"
+              src="assets/img/Country-Details/fluent_weather-cloudy-20-regular1.png"
               alt=""
             />
           </div>
-          <div>
-            <p>day 2</p>
+          <div class="day-weather">
+            <p class="days">day 2</p>
             <img
-              src="assets/img/Country-Details/carbon_mostly-cloudy.png"
+              src="assets/img/Country-Details/fluent_weather-cloudy-20-regular1.png"
               alt=""
+              class="state"
             />
           </div>
-          <div>
-            <p>
-              day 3</p>
-              <img
-                src="assets/img/Country-Details/carbon_mostly-cloudy.png"
-                alt=""
-              />
+          <div class="day-weather">
+            <p class="days">day 3</p>
+            <img
+              src="assets/img/Country-Details/fluent_weather-cloudy-20-regular1.png"
+              alt=""
+            />
           </div>
         </div>
-      </section> -->
+        <br /><br />
+      </section>
     </main>
   </body>
 </html>
