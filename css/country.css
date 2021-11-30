@@ -289,6 +289,102 @@ select {
   color: #ffffff;
   margin-bottom: 10px;
 }
+/*footer style*/
+footer{
+  background-color:#EDF2FF;
+  display:flex;
+  justify-content: space-around;
+  margin-top: 7rem;
+  }
+  .footeer-section{
+  margin-top: 2rem;
+  }
+  footer a {
+  text-align:left;
+  padding-top:1.3rem;
+  color: #828282;
+  text-decoration: none;
+  font-style: normal;
+  font-weight:bold;
+  font-size: 1.1em;
+  display:flex;
+  flex-direction:column;
+
+  }
+  .climostate-tittle{
+  display: flex;
+  flex-direction: row; 
+  justify-content:left; 
+  margin-top: 4rem;
+  }
+  .climostate-tittle h4{
+  font-size: 1rem;
+  color:#000000;
+  font-style: bold;
+  font-weight: 800;
+  padding-left: .6rem;
+  margin-bottom:2rem;
+  }
+
+  .climostate-tittle img{
+  width: 20px;
+  height: 21px;   
+  }
+  footer span{ 
+  font-weight:bolder;
+  font-style: normal;
+  color:#646464;
+  font-size: .9rem;
+  margin-top:2rem;
+  }
+  .footeer-section p{
+  font-weight: bolder;
+  font-size: 18px;
+  color: #000000;
+  line-height: 2.5rem;
+  margin-bottom: 3rem;
+  }
+  .follow-button{
+  background-color: white;
+  width: 10rem;
+  text-align: center; 
+  padding: .5rem;
+  border-radius: 3px;
+  border: 1px solid #AAAAAA;
+  }
+  .follow-button span{
+  color: #030303;
+  font-weight: bolder;
+  margin-right:3px;
+  font-size: 1rem;
+  }
+  .follow-button i{
+  color: #55ACEE;
+  }
+  .footer-media{
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.7rem;
+  margin-top: 4rem ; 
+  }
+  .footer-media a{
+  padding-right: 1rem;
+  color: #000000;
+  }
+
+
+@media (max-width: 500px) {
+  .slide .content {
+    bottom: -300px;
+    left: 0;
+    width: 100%;
+  }
+
+  .slide.current .content {
+    transform: translateY(-300px);
+  }
+}
+
 
 @media (min-width: 1281px) {
   .logo {
