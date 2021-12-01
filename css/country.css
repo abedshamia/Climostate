@@ -70,8 +70,9 @@ main {
 }
 
 #name {
-  width: 400px;
-  font-family: Arial;
+  width: 184px;
+  height: 64px;
+  font-family: Exo;
   font-style: normal;
   font-weight: bold;
   font-size: 56px;
@@ -82,14 +83,13 @@ main {
 #continent {
   width: 127px;
   height: 34px;
-  font-family: Arial;
+  font-family: Exo;
   font-style: normal;
   font-weight: bold;
   font-size: 30px;
   line-height: 34px;
   color: #c4c4c4;
 }
-
 
 .allign-item {
   display: flex;
@@ -101,7 +101,6 @@ main {
 .emoji {
   width: 48px;
   height: 48px;
-  font-family: Arial;
   font-style: normal;
   font-size: 48px;
   line-height: 55px;
@@ -113,7 +112,7 @@ main {
 #now-weather {
   align-self: center;
 
-  font-family: Arial;
+  font-family: Exo;
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
@@ -156,7 +155,7 @@ main {
   display: flex;
   justify-content: space-between;
 }
-option{
+option {
   color: black;
 }
 select {
@@ -191,7 +190,6 @@ select {
 
 #wind {
   display: inline;
-  font-family: Arial;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -201,7 +199,6 @@ select {
 }
 #temp {
   margin-bottom: 25px;
-  font-family: Roboto;
   font-style: normal;
   font-weight: 300;
   font-size: 48px;
@@ -222,7 +219,6 @@ select {
   left: 10vw;
   top: 692px;
 
-  font-family: "New Rocker";
   font-style: normal;
   font-weight: normal;
   font-size: 56px;
@@ -260,7 +256,6 @@ select {
   color: #6183ff;
 }
 .days {
-  font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
@@ -280,7 +275,6 @@ select {
   justify-content: space-between;
 }
 #current-state {
-  font-family: Arial;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -289,88 +283,86 @@ select {
   margin-bottom: 10px;
 }
 /*footer style*/
-footer{
-  background-color:#EDF2FF;
-  display:flex;
+footer {
+  background-color: #edf2ff;
+  display: flex;
   justify-content: space-around;
   margin-top: 7rem;
-  }
-  .footeer-section{
+}
+.footeer-section {
   margin-top: 2rem;
-  }
-  footer a {
-  text-align:left;
-  padding-top:1.3rem;
+}
+footer a {
+  text-align: left;
+  padding-top: 1.3rem;
   color: #828282;
   text-decoration: none;
   font-style: normal;
-  font-weight:bold;
+  font-weight: bold;
   font-size: 1.1em;
-  display:flex;
-  flex-direction:column;
-
-  }
-  .climostate-tittle{
   display: flex;
-  flex-direction: row; 
-  justify-content:left; 
+  flex-direction: column;
+}
+.climostate-tittle {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
   margin-top: 4rem;
-  }
-  .climostate-tittle h4{
+}
+.climostate-tittle h4 {
   font-size: 1rem;
-  color:#000000;
+  color: #000000;
   font-style: bold;
   font-weight: 800;
-  padding-left: .6rem;
-  margin-bottom:2rem;
-  }
+  padding-left: 0.6rem;
+  margin-bottom: 2rem;
+}
 
-  .climostate-tittle img{
+.climostate-tittle img {
   width: 20px;
-  height: 21px;   
-  }
-  footer span{ 
-  font-weight:bolder;
+  height: 21px;
+}
+footer span {
+  font-weight: bolder;
   font-style: normal;
-  color:#646464;
-  font-size: .9rem;
-  margin-top:2rem;
-  }
-  .footeer-section p{
+  color: #646464;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+.footeer-section p {
   font-weight: bolder;
   font-size: 18px;
   color: #000000;
   line-height: 2.5rem;
   margin-bottom: 3rem;
-  }
-  .follow-button{
+}
+.follow-button {
   background-color: white;
   width: 10rem;
-  text-align: center; 
-  padding: .5rem;
+  text-align: center;
+  padding: 0.5rem;
   border-radius: 3px;
-  border: 1px solid #AAAAAA;
-  }
-  .follow-button span{
+  border: 1px solid #aaaaaa;
+}
+.follow-button span {
   color: #030303;
   font-weight: bolder;
-  margin-right:3px;
+  margin-right: 3px;
   font-size: 1rem;
-  }
-  .follow-button i{
-  color: #55ACEE;
-  }
-  .footer-media{
+}
+.follow-button i {
+  color: #55acee;
+}
+.footer-media {
   display: flex;
   justify-content: space-evenly;
   font-size: 1.7rem;
-  margin-top: 4rem ; 
-  }
-  .footer-media a{
+  margin-top: 4rem;
+}
+.footer-media a {
   padding-right: 1rem;
   color: #000000;
-  }
-
+}
 
 @media (max-width: 500px) {
   .slide .content {
@@ -383,7 +375,6 @@ footer{
     transform: translateY(-300px);
   }
 }
-
 
 @media (min-width: 1281px) {
   .logo {
