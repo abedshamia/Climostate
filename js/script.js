@@ -62,29 +62,22 @@ if (auto) {
   slideInterval = setInterval(nextSlide, intervalTime);
 }
 
+//add country
+const input = document.getElementById("input");
+const btn = document.getElementById("btn");
 
-//add country 
-const input = document.getElementById('input')
-const btn= document.getElementById('btn')
-
-btn.addEventListener('click', goToCountry)
-input.addEventListener('keydown',(e)=>{
-    if(e.key ==='Enter'){
-     
-        goToCountry();
-    }
+btn.addEventListener("click", goToCountry);
+input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    goToCountry();
+  }
 });
 
-function goToCountry(){
-
-if(input.value){
-  
-  localStorage.setItem('country',input.value)
-  location.href = "country-details.html";
-
+function goToCountry() {
+  if (input.value) {
+    localStorage.setItem("country", input.value);
+    location.href = "country-details.html";
+  } else {
+    alert("please add a country name");
+  }
 }
-else{
-  alert("please add a country name")
-}
-}
-
