@@ -1,5 +1,4 @@
 let country = localStorage.getItem("country");
-console.log(country);
 const containerDiv = document.getElementsByClassName("h-photo")[0];
 
 //an API displays a photo of the selected country
@@ -38,8 +37,7 @@ const countryAPI = fetch(`https://restcountries.com/v3.1/name/${country}`)
   });
 
 //Countries API
-const countriesAPI = fetch(`https://restcountries.com/v3.1/name/france`);
-countriesAPI.then((data) => console.log(data.json()));
+// const countriesAPI = fetch(`https://restcountries.com/v3.1/name/france`);
 
 //Cities API
 const citiesAPI = `https://countriesnow.space/api/v0.1/countries/cities`;
@@ -70,7 +68,6 @@ function displayCountryHeader(country) {
     .then((data) => data.json())
     .then((data) => data[0])
     .then((selectedCountry) => {
-      console.log(selectedCountry);
       const cardHeader = document.createElement("div");
       cardHeader.classList.add("allign-item");
       countryDetails.appendChild(cardHeader);
@@ -143,10 +140,6 @@ function displayCountryDetails(country) {
       values.forEach((value) => infoGrid.appendChild(value));
     });
 }
-
-const test = "Egypt";
-displayCountryHeader(test);
-displayCountryDetails(test);
 
 //Display Country Cities
 
@@ -236,4 +229,7 @@ function displayCityDetails(city) {
     });
 }
 
-displayCountryCities(test);
+displayCountryHeader(country);
+displayCountryDetails(country);
+
+displayCountryCities(country);
