@@ -10,6 +10,10 @@
   --shade: #3fafac;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Exo", sans-serif;
   line-height: 1.5;
