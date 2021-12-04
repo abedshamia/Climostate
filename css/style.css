@@ -98,19 +98,19 @@ main {
 }
 
 .hero-text p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 300;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .hero-text input {
   width: 50%;
-  height: 40px;
+  height: 1.5rem;
   border: none;
   outline: none;
   border-radius: 3px;
   background: #fff;
-  padding: 25px 20px;
+  padding: 1.2rem 1.2rem;
   color: #333;
   margin-top: 32px;
   margin-bottom: 20px;
@@ -118,7 +118,7 @@ main {
 
 .hero-text a {
   display: inline-block;
-  padding: 15px 15px;
+  padding: 0.4rem 1rem;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
@@ -191,6 +191,9 @@ hr {
 }
 /*features section style*/
 
+.features {
+  margin-top: -3.4rem;
+}
 .features-tittle {
   display: flex;
   flex-direction: row;
@@ -365,7 +368,7 @@ hr {
   overflow: hidden;
   height: 140vh;
   width: 98.9vw;
-  margin-top: 6rem;
+  margin-top: 2rem;
 }
 
 .slide {
@@ -539,6 +542,26 @@ footer span {
     top/cover;
 }
 
+.slide:nth-child(4) {
+  background: url("../assets/img/Landing/Slider/slider-6.jpg") no-repeat center
+    top/cover;
+}
+
+.slide:nth-child(5) {
+  background: url("../assets/img/Landing/Slider/slider-5.jpg") no-repeat center
+    top/cover;
+}
+
+.slide:nth-child(6) {
+  background: url("../assets/img/Landing/Slider/slider-4.jpg") no-repeat center
+    top/cover;
+}
+
+.slide:nth-child(7) {
+  background: url("../assets/img/Landing/Slider/slider-7.jpg") no-repeat center
+    top/cover;
+}
+
 @media (min-width: 1281px) {
   .logo {
     margin-left: 5rem;
@@ -639,6 +662,9 @@ footer span {
 @media (min-width: 320px) and (max-width: 1024px) {
   /* CSS */
 
+  html {
+    font-size: 80%;
+  }
   .logo {
     margin-top: 2rem;
     margin-left: 1rem;
@@ -686,7 +712,7 @@ footer span {
   .hero input {
     width: 70%;
     margin-top: 2rem;
-    padding: 0.5rem;
+    padding: 1.2rem;
     border-radius: 5px;
   }
 
@@ -713,6 +739,10 @@ footer span {
     height: 50vh;
   }
 
+  .features {
+    margin-top: -3rem;
+  }
+
   .features-icons {
     display: flex;
     flex-direction: column;
@@ -720,6 +750,11 @@ footer span {
     text-align: center;
     align-items: center;
   }
+
+  .features-icon img {
+    width: 5.2rem;
+  }
+
   .features-icon p {
     color: var(--secondary-color);
     font-size: 1.2rem;
