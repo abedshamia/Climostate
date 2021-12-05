@@ -129,7 +129,7 @@ main {
 }
 
 .hero-text a:hover {
-  background-color: var(--tint);
+  background-color: var(--shade);
   transition: all 0.3s;
 }
 
@@ -159,6 +159,7 @@ main {
   height: 100vh;
   object-fit: cover;
   filter: brightness(0.6) contrast(1.2) saturate(1.2) sepia(0.2);
+  transition: all 0.5s ease;
 }
 
 .hero-img2 {
@@ -166,10 +167,11 @@ main {
   height: 100vh;
   object-fit: cover;
   filter: brightness(0.8) contrast(1.2) saturate(1.2) sepia(0.2);
+  transition: all 0.5s ease;
 }
 
 .hero-img:hover {
-  filter: brightness(1.2) contrast(1.2) saturate(1.2) sepia(0.2);
+  filter: brightness(1.1) contrast(1.2) saturate(1.2) sepia(0.2);
   width: 100%;
   transition: all 0.5s ease;
   margin-right: -50%;
@@ -177,7 +179,7 @@ main {
 }
 
 .hero-img2:hover {
-  filter: brightness(0.9) contrast(1.2) saturate(1.2) sepia(0.2);
+  filter: brightness(1.1) contrast(1.2) saturate(1.2) sepia(0.2);
   width: 100%;
   transition: all 0.5s ease;
   margin-left: -50%;
@@ -638,6 +640,9 @@ footer span {
 
 @media (min-width: 320px) and (max-width: 1024px) {
   /* CSS */
+  html {
+    font-size: 80.5%;
+  }
 
   .logo {
     margin-top: 2rem;
@@ -806,6 +811,17 @@ footer span {
 }
 /** responsive for tablet**/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+  .features-icons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row: span 2;
+  }
+
+  .features-icon-responsive {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
   .Testimonials {
     min-height: 60rem;
     min-width: 47rem;
