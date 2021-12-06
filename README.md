@@ -1,3 +1,5 @@
+
+![2](https://user-images.githubusercontent.com/73759748/144758790-fa813f77-4ae3-44fb-9108-672a9771f8a5.png)
 # Climostate
 
 *  [About](https://)
@@ -54,19 +56,22 @@ Features
 
 Wireframes UI/UX
 ---
-
-
-
-
-
-
+<p float='left' align='center'>
+<img src="https://user-images.githubusercontent.com/73759748/144758393-7ffa8e59-2ca0-461b-b23a-6c2c86072932.png" alt="drawing1" width="450" />
+ 
+<img src="https://user-images.githubusercontent.com/73759748/144758391-2ba8cf65-1d8a-4122-b5eb-2b48ccda3762.png" alt="drawing2" width="450" />
+</p>
 
 
 
 Website layout 
 ---
+<p align='center'>
+ 
+![1](https://user-images.githubusercontent.com/73759748/144758845-0903ed1c-1f05-40cc-b939-058793cc69d0.png)
 
-
+![3](https://user-images.githubusercontent.com/73759748/144758979-dc2fc97c-1d21-410b-ab28-bb0c430e5e3b.png)
+</p>
 
 
 
@@ -76,12 +81,6 @@ Live Website
  our demo website [**Here**](https://gsg-cf04.github.io/Climostate/).
  
  
- 
- 
-
-Website layout
----
-
  
  
  
