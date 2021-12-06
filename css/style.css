@@ -536,35 +536,35 @@ footer span {
 /* Backgorund Images */
 
 .slide:first-child {
-  background: url("../assets/img/Landing/Slider/slider-1.jpg") no-repeat center
+  background: url("../assets/img/Landing/Slider/slider-1.webp") no-repeat center
     top/cover;
 }
 .slide:nth-child(2) {
-  background: url("../assets/img/Landing/Slider/slider-2.jpg") no-repeat center
+  background: url("../assets/img/Landing/Slider/slider-2.webp") no-repeat center
     top/cover;
 }
 .slide:nth-child(3) {
-  background: url("../assets/img/Landing/Slider/slider-3.jpg") no-repeat center
+  background: url("../assets/img/Landing/Slider/slider-3.webp") no-repeat center
     top/cover;
 }
 
 .slide:nth-child(4) {
-  background: url("../assets/img/Landing/Slider/slider-6.jpg") no-repeat center
+  background: url("../assets/img/Landing/Slider/slider-6.webp") no-repeat center
     top/cover;
 }
 
 .slide:nth-child(5) {
-  background: url("../assets/img/Landing/Slider/slider-5.jpg") no-repeat center
+  background: url("../assets/img/Landing/Slider/slider-5.webp") no-repeat center
     top/cover;
 }
 
 .slide:nth-child(6) {
-  background: url("../assets/img/Landing/Slider/slider-4.jpg") no-repeat center
+  background: url("../assets/img/Landing/Slider/slider-4.webp") no-repeat center
     top/cover;
 }
 
 .slide:nth-child(7) {
-  background: url("../assets/img/Landing/Slider/slider-7.jpg") no-repeat center
+  background: url("../assets/img/Landing/Slider/slider-7.webp") no-repeat center
     top/cover;
 }
 
