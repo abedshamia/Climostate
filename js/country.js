@@ -42,3 +42,54 @@ postData(`${citiesAPI}`, { country: "France" }).then((data) => {
 //Countries API
 const countriesAPI = fetch(`https://restcountries.com/v3.1/name/france`);
 countriesAPI.then((data) => console.log(data.json()));
+
+
+//the forecast for 3 days  function 
+let cityWeather="";
+
+SelectCity.addEventListener("chang",(e)=>{
+  const city= e.target.value;
+  cityWeather= e.target.value;
+  displayCityDetails(city);
+  displayWeather(cityWeather);
+})
+//selectors:
+let daysCard= document.querySelectorAll('#days-card');
+
+//function :
+   function displayWeather(city){
+
+      fetch(`https://goweather.herokuapp.com/weather/${city}`)
+      .then(data => data.json())
+      .then(data =>{
+        const days= data.forecast;
+        days.forecast.forEach((day,i) => {
+
+        const dayWeather= document.createElement("div");
+        dayWeather.classList.add('day-weather');
+        daysCard.appendChild(dayWeather);
+
+        const dayNum= document.createElement("div");
+        dayNum.classList.add('days');
+        dayNum.textContent="day"+days[i].day;
+        dayWeather.appendChild(dayNum);
+
+       const temp= +days[i].temperature;
+       let srcURL="";
+        if(temp<=0){ 
+          srcURL="fontisto_night-alt-cloudy3.png"
+        }else if(temp<=15){
+          srcURL= "fluent_weather-cloudy-20-regular1.png"; 
+        }else{
+          srcURL= "fe_sunny-o2.png"; 
+        }
+        
+        const dayImg= document.createElement("img");
+        dayImg.classList.add("state");
+        dayImg.src=`../assests/img/country-Details/${srcURL}`;
+        dayWeather.appendChild(dayImg);
+
+         });
+       }) 
+}
+let test;
