@@ -215,6 +215,7 @@ function displayCountryCities(selectedCountry) {
       option.value = city;
       option.textContent = city;
       selectCity.name = city;
+
       selectCity.appendChild(option);
     });
   });
