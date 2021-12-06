@@ -42,6 +42,12 @@ Climostate aims to  give you an glimpse about weather help you have a better exp
 - see the temperature of the selected city of the country I'm looking for
 - see the forecast for 3 days of the selected city inthe country I'm looking for
 
+## **User Journey**  :pencil2:
+ When the user enters the Event web application home, he/she can view different sections that shows (features - testimonials - explore places)  He/She can choose the desired section to view by clicking on to its name on the navigation bar or by scrolling and then transferring to it. At the home page, she/he look up for the desired country by typing its name and click "Get Started!".
+
+ After the user clicks on the "Get Started!" button on the home page, he will be moved to an desired country page in which he/she can view different cards about the country including its photo, general info, cities' weather state and next 3 days state for the country. 
+
+
 Features
 ---
 * Easy to use.
@@ -87,7 +93,7 @@ Website layout
  
 ## Team Members
 * [Abdelrahman Shamia](https://github.com/abedshamia)
-* [Nebal ](https://github.com/nebal96)
+* [Nebal Irheem](https://github.com/nebal96)
 * [Nabil AbuShaban](https://github.com/nabilramy)
 
  
