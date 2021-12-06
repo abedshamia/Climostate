@@ -165,14 +165,9 @@ function displayCountryCities(selectedCountry) {
     });
   });
 
-  let cityWeather = "";
-
   selectCity.addEventListener("change", (e) => {
     const city = e.target.value;
-    cityWeather = e.target.value;
-
     displayCityDetails(city);
-    displayWeather(cityWeather);
   });
 }
 
@@ -235,40 +230,6 @@ function displayCityDetails(city) {
     });
 }
 
-let daysCard = document.querySelector("#days-card");
-
-function displayWeather(city) {
-  fetch(`https://goweather.herokuapp.com/weather/${city}`)
-    .then((data) => data.json())
-    .then((data) => {
-      const days = data.forecast;
-      days.forEach((day, i) => {
-        const dayWeather = document.createElement("div");
-        dayWeather.classList.add("day-weather");
-        daysCard.appendChild(dayWeather);
-
-        const dayNum = document.createElement("p");
-        dayNum.classList.add("days");
-        dayNum.textContent = "Day " + days[i].day;
-        dayWeather.appendChild(dayNum);
-
-        const temp = +days[i].temperature;
-        let srcURL = "";
-        if (temp <= 0) {
-          srcURL = "fontisto_night-alt-cloudy3.png";
-        } else if (temp <= 15) {
-          srcURL = "fluent_weather-cloudy-20-regular1.png";
-        } else {
-          srcURL = "fe_sunny-o2.png";
-        }
-
-        const dayImg = document.createElement("img");
-        dayImg.classList.add("state");
-        dayImg.src = `../assets/img/Country-Details/${srcURL}`;
-        dayWeather.appendChild(dayImg);
-      });
-    });
-}
 displayCountryHeader(country);
 displayCountryDetails(country);
 
