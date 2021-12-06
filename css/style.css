@@ -177,7 +177,7 @@ main {
 .hero-img:hover {
   filter: brightness(1.1) contrast(1.2) saturate(1.2) sepia(0.2);
   width: 100%;
-  transition: all 0.5s ease;
+  transition: all 0.8s ease;
   margin-right: -50%;
   z-index: 2;
 }
@@ -185,7 +185,7 @@ main {
 .hero-img2:hover {
   filter: brightness(1.1) contrast(1.2) saturate(1.2) sepia(0.2);
   width: 100%;
-  transition: all 0.5s ease;
+  transition: all 0.8s ease;
   margin-left: -50%;
   z-index: 2;
 }
