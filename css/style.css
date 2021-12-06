@@ -185,7 +185,7 @@ hr {
   width: 73%;
   background-color: #5d5d5d;
   transform: translate(-50%, 0);
-  z-index: 2000;
+  z-index: 100;
 }
 
 .features-tittle {
@@ -629,7 +629,17 @@ footer span {
     transition: all 0.3 ease;
   }
   .nav-list {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: all 0.5s ease;
+  }
+
+  .header.active .nav-list {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
   }
 
   .header.active .nav-list a {
@@ -810,14 +820,22 @@ footer span {
     transition: all 0.3 ease;
   }
   .nav-list {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: all 0.5s ease;
   }
+
   .header.active .nav-list {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
     margin-top: 5.4rem;
     font-size: 1.8rem;
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
   }
 
   .header.active .nav-list a {
@@ -834,7 +852,7 @@ footer span {
   }
 
   .features-br {
-    margin-top: 8.5rem;
+    margin-top: 16.5rem;
   }
   .features-icons {
     display: grid;
