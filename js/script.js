@@ -61,3 +61,42 @@ if (auto) {
   // Run next slide at interval time
   slideInterval = setInterval(nextSlide, intervalTime);
 }
+
+//add country
+const input = document.getElementById("input");
+const btn = document.getElementById("btn");
+
+btn.addEventListener("click", goToCountry);
+input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    goToCountry();
+  }
+});
+
+function goToCountry() {
+  if (input.value) {
+    localStorage.setItem("country", input.value);
+    location.href = "country-details.html";
+  } else {
+    alert("please add a country name");
+  }
+}
+
+const menu = document.querySelector(".menu");
+const closeMenu = document.querySelector(".menu.close");
+const headerEl = document.querySelector(".header");
+const linksEl = document.querySelectorAll(".nav-link");
+
+menu.addEventListener("click", function () {
+  headerEl.classList.add("active");
+});
+
+closeMenu.addEventListener("click", function () {
+  headerEl.classList.remove("active");
+});
+
+linksEl.forEach((link) => {
+  link.addEventListener("click", function () {
+    headerEl.classList.remove("active");
+  });
+});
