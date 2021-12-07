@@ -18,6 +18,8 @@ const countryAPI = fetch(`https://restcountries.com/v3.1/name/${country}`)
     officialName.setAttribute("id", "official-name");
     officialName.innerHTML = `${data[0].name.official}`;
     containerDiv.appendChild(officialName);
+    const heading = document.getElementsByClassName("nav-link")[0]
+heading.innerHTML = `${data[0].name.common} is here!`
   });
 
 //Cities API
@@ -77,6 +79,7 @@ function displayCountryHeader(country) {
       displayCountryDetails(searchedCountry);
 
       displayCountryCities(searchedCountry);
+
 
       //Get a photo for the searchedCountry
       const pixaAPI = fetch(
@@ -287,3 +290,4 @@ function displayCountryCities(selectedCountry) {
     displayWeather(cityWeather);
   });
 }
+
