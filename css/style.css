@@ -538,7 +538,9 @@ footer span {
     margin-bottom: 3rem;
     white-space: pre-line;
   }
-  
+  .menu {
+    display: none;
+  }
   .footer-grid {
     display: contents;
   }
@@ -548,7 +550,9 @@ footer span {
     margin-left: 5rem;
     margin-top: 2rem;
   }
- 
+  .menu {
+    display: none;
+  }
   .Testimonials-avater {
     position: absolute;
   }
@@ -585,11 +589,26 @@ footer span {
     margin-top: 2rem;
     margin-left: 1rem;
   }
-  
+  .menu {
+    position: fixed;
+    top: 0.5rem;
+    right: 0;
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
   .header .menu.close {
     display: none;
   }
- 
+  .menu:hover {
+    background-color: var(--shade);
+    color: #fff;
+  }
   .body {
     position: relative;
   }
@@ -761,11 +780,26 @@ footer span {
     font-size: 85%;
   }
 
- 
+  .menu {
+    position: fixed;
+    top: 0.5rem;
+    right: 0;
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
   .header .menu.close {
     display: none;
   }
- 
+  .menu:hover {
+    background-color: var(--shade);
+    color: #fff;
+  }
   .body {
     position: relative;
   }
