@@ -18,8 +18,8 @@ const countryAPI = fetch(`https://restcountries.com/v3.1/name/${country}`)
     officialName.setAttribute("id", "official-name");
     officialName.innerHTML = `${data[0].name.official}`;
     containerDiv.appendChild(officialName);
-    const heading = document.getElementsByClassName("nav-link")[0]
-heading.innerHTML = `${data[0].name.common} is here!`
+    const heading = document.getElementsByClassName("nav-link")[0];
+    heading.innerHTML = `${data[0].name.common} is here!`;
   });
 
 //Cities API
@@ -79,7 +79,6 @@ function displayCountryHeader(country) {
       displayCountryDetails(searchedCountry);
 
       displayCountryCities(searchedCountry);
-
 
       //Get a photo for the searchedCountry
       const pixaAPI = fetch(
@@ -258,7 +257,7 @@ function displayWeather(city) {
           : (srcURL = "fe_sunny-o2.png");
         const dayImg = document.createElement("img");
         dayImg.classList.add("state");
-        dayImg.src = `../assets/img/Country-Details/${srcURL}`;
+        dayImg.src = `assets/img/Country-Details/${srcURL}`;
         dayWeather.appendChild(dayImg);
       });
     });
@@ -290,4 +289,3 @@ function displayCountryCities(selectedCountry) {
     displayWeather(cityWeather);
   });
 }
-
