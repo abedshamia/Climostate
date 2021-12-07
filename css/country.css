@@ -70,8 +70,7 @@ main {
 }
 
 #name {
-  width: 184px;
-  height: 64px;
+  width: 400x;
   font-family: Exo;
   font-style: normal;
   font-weight: bold;
@@ -81,8 +80,6 @@ main {
   color: #000000;
 }
 #continent {
-  width: 127px;
-  height: 34px;
   font-family: Exo;
   font-style: normal;
   font-weight: bold;
@@ -217,13 +214,14 @@ select {
   z-index: 2;
   height: 69px;
   left: 10vw;
-  top: 692px;
+  top: 650px;
 
   font-style: normal;
   font-weight: normal;
   font-size: 56px;
   line-height: 69px;
   color: #ffffff;
+  width: 450px;
 }
 #flag {
   width: 70px;
@@ -475,6 +473,8 @@ footer span {
 
   #official-name {
     font-size: 48px;
+    width: auto;
+
   }
 
   .now-state-img {
