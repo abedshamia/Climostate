@@ -796,7 +796,10 @@ footer span {
   .header .menu.close {
     display: none;
   }
-
+  .menu:hover {
+    background-color: var(--shade);
+    color: #fff;
+  }
   .body {
     position: relative;
   }
