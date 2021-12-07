@@ -2,19 +2,9 @@
 ![2](https://user-images.githubusercontent.com/73759748/144758790-fa813f77-4ae3-44fb-9108-672a9771f8a5.png)
 # Climostate
 
-*  [About](https://)
-*  [Features](https://)
-*  [Wireframes UI/UX](https://)
-*  [Design page](https://)
-*  [Live Website](https://)
-*  [Team Members](https://)
-*  [Contact](https://)
 
 
-
-
-About Climostate
----
+## **About Climostate** :sunrise: 
 
 
 -What?
@@ -25,6 +15,7 @@ Once you enter the name of the country in the search field, it displays informat
 Climostate aims to  give you an glimpse about weather help you have a better explore experience, by knowing your destination and the country you intend to visit based on the weather in that country.
 
 -How?
+
 
 ## **User Stories**  :books: 
  #### As a user, I can : 
@@ -44,8 +35,16 @@ Climostate aims to  give you an glimpse about weather help you have a better exp
 - see the temperature of the selected city of the country I'm looking for
 - see the forecast for 3 days of the selected city inthe country I'm looking for
 
-Features
----
+## **User Journey**  :pencil2:
+ When the user enters the Event web application home, he/she can view different sections that shows (features - testimonials - explore places)  He/She can choose the desired section to view by clicking on to its name on the navigation bar or by scrolling and then transferring to it. At the home page, she/he look up for the desired country by typing its name and click "Get Started!".
+
+ After the user clicks on the "Get Started!" button on the home page, he will be moved to an desired country page in which he/she can view different cards about the country including its photo, general info, cities' weather state and next 3 days state for the country. 
+
+
+
+
+## **Features** :
+
 * Easy to use.
 * Displays weather forecasts in a clear and easy to understand manner.
 *  Easily browse weather information for any country in the world.
@@ -54,7 +53,7 @@ Features
 * Protect your health with air speed and temperature indicator.
 
 
-Wireframes UI/UX
+## **Wireframes UI/UX** :art: 
 ---
 <p float='left' align='center'>
 <img src="https://user-images.githubusercontent.com/73759748/144758393-7ffa8e59-2ca0-461b-b23a-6c2c86072932.png" alt="drawing1" width="450" />
@@ -64,7 +63,7 @@ Wireframes UI/UX
 
 
 
-Website layout 
+## **Website layout** :iphone: 
 ---
 <p align='center'>
  
@@ -73,24 +72,48 @@ Website layout
 ![3](https://user-images.githubusercontent.com/73759748/144758979-dc2fc97c-1d21-410b-ab28-bb0c430e5e3b.png)
 </p>
 
+## **API documentation** :robot_face: 
+* [Pixaby](https://pixabay.com) for photos
+* [Rest Countries](https://restcountries.com) for countries
+* [Countries Now](https://countriesnow.space/api/v0.1/countries/cities) for cities
+* [Heroku App](https://goweather.herokuapp.com) for weather state
+ 
 
 
-Live Website
----
+
+
+ 
+ 
+## **Technologies** :computer: 
+
+- Git Work Flow
+- HTML5
+- CSS
+- Javascript (JS)
+- Local Storage
+- API
+
+## **Live Website** :tv: 
+
 
  our demo website [**Here**](https://gsg-cf04.github.io/Climostate/).
  
+
+## Runnig the project locally :hotel:
+
+
+```
+- git clone https://github.com/GSG-CF04/Climostate.git
+- cd climostate
+- code . 
+```
+
+## **Team Members** :male-office-worker: 
  
  
- 
- 
-## Team Members
+
 * [Abdelrahman Shamia](https://github.com/abedshamia)
-* [Nebal ](https://github.com/nebal96)
+* [Nebal Irheem](https://github.com/nebal96)
 * [Nabil AbuShaban](https://github.com/nabilramy)
-
  
-Contact
----
-
 
