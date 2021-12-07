@@ -1,7 +1,8 @@
+//Get Search Input from localStorage
 let country = localStorage.getItem("country");
-let common = ""
 const containerDiv = document.getElementsByClassName("h-photo")[0];
-
+let searchedCountry = "";
+const pixaKey = "24477339-22b8ee8a367b2cdaebd16eb69";
 
 //an API gives the official name of the country
 const countryAPI = fetch(`https://restcountries.com/v3.1/name/${country}`)
@@ -13,41 +14,11 @@ const countryAPI = fetch(`https://restcountries.com/v3.1/name/${country}`)
     }
   })
   .then((data) => {
-    common = data[0].name.common
     const officialName = document.createElement("h1");
     officialName.setAttribute("id", "official-name");
     officialName.innerHTML = `${data[0].name.official}`;
     containerDiv.appendChild(officialName);
-
-    //an API displays a photo of the selected country
-
-    const pixaKey = "24477339-22b8ee8a367b2cdaebd16eb69";
-    const pixaAPI = fetch(
-      `https://pixabay.com/api/?key=${pixaKey}&q=${common}&image_type=photo&pretty=true&imageHeight=1080&imageWidth=1920`
-    )
-      .then((resp) => {
-        if (resp.status !== 200) {
-          console.log("there was a problem connecting to Api");
-        } else {
-          return resp.json();
-        }
-      })
-      .then((datax) => {
-       
-        const photo = document.createElement("img");
-        photo.setAttribute("src", `${datax.hits[0].largeImageURL}`);
-        photo.setAttribute("id", `header`);
-        containerDiv.appendChild(photo);
-      });
-    
-
-
   });
-
-
-
-//Countries API
-// const countriesAPI = fetch(`https://restcountries.com/v3.1/name/france`);
 
 //Cities API
 const citiesAPI = `https://countriesnow.space/api/v0.1/countries/cities`;
@@ -73,66 +44,12 @@ async function postData(url, data) {
 const countrySection = document.querySelector("#country");
 const countryDetails = document.querySelector("#country-details");
 
-
-//Countries API
-const countriesAPI = fetch(`https://restcountries.com/v3.1/name/france`);
-countriesAPI.then((data) => console.log(data.json()));
-
-
-//the forecast for 3 days  function 
-let cityWeather="";
-
-SelectCity.addEventListener("chang",(e)=>{
-  const city= e.target.value;
-  cityWeather= e.target.value;
-  displayCityDetails(city);
-  displayWeather(cityWeather);
-})
-//selectors:
-let daysCard= document.querySelectorAll('#days-card');
-
-//function :
-   function displayWeather(city){
-
-      fetch(`https://goweather.herokuapp.com/weather/${city}`)
-      .then(data => data.json())
-      .then(data =>{
-        const days= data.forecast;
-        days.forecast.forEach((day,i) => {
-
-        const dayWeather= document.createElement("div");
-        dayWeather.classList.add('day-weather');
-        daysCard.appendChild(dayWeather);
-
-        const dayNum= document.createElement("div");
-        dayNum.classList.add('days');
-        dayNum.textContent="day"+days[i].day;
-        dayWeather.appendChild(dayNum);
-
-       const temp= +days[i].temperature;
-       let srcURL="";
-        if(temp<=0){ 
-          srcURL="fontisto_night-alt-cloudy3.png"
-        }else if(temp<=15){
-          srcURL= "fluent_weather-cloudy-20-regular1.png"; 
-        }else{
-          srcURL= "fe_sunny-o2.png"; 
-        }
-        
-        const dayImg= document.createElement("img");
-        dayImg.classList.add("state");
-        dayImg.src=`../assests/img/country-Details/${srcURL}`;
-        dayWeather.appendChild(dayImg);
-
-         });
-       }) 
-}
-
 function displayCountryHeader(country) {
   fetch(`https://restcountries.com/v3.1/name/${country}`)
     .then((data) => data.json())
     .then((data) => data[0])
     .then((selectedCountry) => {
+      document.title = `${selectedCountry.name.official}`;
       const cardHeader = document.createElement("div");
       cardHeader.classList.add("allign-item");
       countryDetails.appendChild(cardHeader);
@@ -144,6 +61,7 @@ function displayCountryHeader(country) {
       const countryName = document.createElement("h1");
       countryName.id = "name";
       countryName.textContent = selectedCountry.name.common;
+      searchedCountry = selectedCountry.name.common;
       const countryContinent = document.createElement("h2");
       countryContinent.id = "continent";
       countryContinent.textContent = selectedCountry.continents[0];
@@ -155,6 +73,39 @@ function displayCountryHeader(country) {
       countryFlag.id = "flag";
       cardHeader.appendChild(countryFlag);
       countryFlag.src = selectedCountry.flags.svg;
+
+      displayCountryDetails(searchedCountry);
+
+      displayCountryCities(searchedCountry);
+
+      //Get a photo for the searchedCountry
+      const pixaAPI = fetch(
+        `https://pixabay.com/api/?key=${pixaKey}&q=${searchedCountry}&image_type=photo&pretty=true&imageHeight=1080&imageWidth=1920`
+      )
+        .then((res) => {
+          if (res.status !== 200) {
+            console.log("there was a problem connecting to Api");
+          } else {
+            return res.json();
+          }
+        })
+        .then((data) => {
+          const photo = document.createElement("img");
+          photo.setAttribute("src", `${data.hits[0].largeImageURL}`);
+          photo.setAttribute("id", `header`);
+          containerDiv.appendChild(photo);
+        });
+    })
+    .catch((err) => {
+      console.log(err);
+      const notFound = document.createElement("h1");
+      notFound.textContent = "Country not found";
+      countryDetails.appendChild(notFound);
+      const backBtn = document.createElement("a");
+      backBtn.classList.add("btn");
+      countryDetails.appendChild(backBtn);
+      backBtn.textContent = "Go Back";
+      backBtn.href = "index.html";
     });
 }
 
@@ -212,29 +163,6 @@ const citySection = document.querySelector("#overlay");
 const horizontalflex = document.querySelector(".horizantal-flex");
 const weatherContainer = document.createElement("div");
 horizontalflex.appendChild(weatherContainer);
-
-//Get Cities of the country and display them
-function displayCountryCities(selectedCountry) {
-  const selectCity = document.createElement("select");
-  selectCity.classList.add("margin-inside-the-box");
-  selectCity.id = "cities";
-  weatherContainer.appendChild(selectCity);
-  postData(`${citiesAPI}`, { country: selectedCountry }).then((result) => {
-    result.data.sort().forEach((city) => {
-      const option = document.createElement("option");
-      option.value = city;
-      option.textContent = city;
-      selectCity.name = city;
-
-      selectCity.appendChild(option);
-    });
-  });
-
-  selectCity.addEventListener("change", (e) => {
-    const city = e.target.value;
-    displayCityDetails(city);
-  });
-}
 
 //Display city Details
 
@@ -296,6 +224,66 @@ function displayCityDetails(city) {
 }
 
 displayCountryHeader(country);
-displayCountryDetails(country);
 
-displayCountryCities(country);
+//selectors:
+let daysCard = document.querySelector("#days-card");
+
+//function :
+function displayWeather(city) {
+  fetch(`https://goweather.herokuapp.com/weather/${city}`)
+    .then((data) => data.json())
+    .then((data) => {
+      const days = data.forecast;
+      console.log(days);
+      days.forEach((day, i) => {
+        const dayWeather = document.createElement("div");
+        dayWeather.classList.add("day-weather");
+        daysCard.appendChild(dayWeather);
+
+        const dayNum = document.createElement("div");
+        dayNum.classList.add("days");
+        dayNum.textContent = "day" + days[i].day;
+        dayWeather.appendChild(dayNum);
+
+        let starterTemp = days[i].temperature;
+        let temp = starterTemp[0] + starterTemp[1] + starterTemp[2];
+        let srcURL = "";
+        temp <= 0
+          ? (srcURL = "fontisto_night-alt-cloudy3.png")
+          : temp > 0 && temp <= 15
+          ? (srcURL = "fluent_weather-cloudy-20-regular1.png")
+          : (srcURL = "fe_sunny-o2.png");
+        const dayImg = document.createElement("img");
+        dayImg.classList.add("state");
+        dayImg.src = `../assets/img/Country-Details/${srcURL}`;
+        dayWeather.appendChild(dayImg);
+      });
+    });
+}
+
+//Get Cities of the country and display them
+function displayCountryCities(selectedCountry) {
+  const selectCity = document.createElement("select");
+  selectCity.classList.add("margin-inside-the-box");
+  selectCity.id = "cities";
+  weatherContainer.appendChild(selectCity);
+  postData(`${citiesAPI}`, { country: selectedCountry }).then((result) => {
+    result.data.sort().forEach((city) => {
+      const option = document.createElement("option");
+      option.value = city;
+      option.textContent = city;
+      selectCity.name = city;
+      selectCity.appendChild(option);
+    });
+  });
+
+  let cityWeather = "";
+
+  //Get city weather in select
+  selectCity.addEventListener("change", (e) => {
+    const city = e.target.value;
+    cityWeather = e.target.value;
+    displayCityDetails(city);
+    displayWeather(cityWeather);
+  });
+}
