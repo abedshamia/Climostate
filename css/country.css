@@ -48,6 +48,8 @@ body {
   margin-top: 20px;
   list-style: none;
   text-transform: uppercase;
+  font-size: 20px;
+
 }
 
 .nav-link:link,
@@ -60,9 +62,6 @@ body {
   transition: all 0.3s;
 }
 
-.nav-link:hover {
-  color: var(--main-color);
-}
 
 .logo {
   position: absolute;
@@ -309,7 +308,7 @@ footer a {
   color: #828282;
   text-decoration: none;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1.1em;
   display: flex;
   flex-direction: column;
@@ -318,19 +317,17 @@ footer a {
   display: flex;
   flex-direction: row;
   justify-content: left;
-  margin-top: 4rem;
 }
-.climostate-tittle h4 {
+.climostate-tittle p {
   font-size: 1rem;
-  color: #000000;
+  color: #000;
   font-style: bold;
   font-weight: 800;
   padding-left: 0.6rem;
-  margin-bottom: 2rem;
 }
-
 .climostate-tittle img {
   width: 20px;
+  margin-top: 0.5rem;
   height: 21px;
 }
 footer span {
@@ -343,17 +340,17 @@ footer span {
 .footeer-section p {
   font-weight: bolder;
   font-size: 18px;
-  color: #000000;
+  color: #000;
   line-height: 2.5rem;
   margin-bottom: 3rem;
 }
 .follow-button {
-  background-color: white;
+  background-color: #fff;
   width: 10rem;
   text-align: center;
   padding: 0.5rem;
   border-radius: 3px;
-  border: 1px solid #aaaaaa;
+  border: 1px solid #aaa;
 }
 .follow-button span {
   color: #030303;
@@ -372,7 +369,7 @@ footer span {
 }
 .footer-media a {
   padding-right: 1rem;
-  color: #000000;
+  color: #000;
 }
 
 @media (max-width: 500px) {
@@ -385,6 +382,7 @@ footer span {
   .slide.current .content {
     transform: translateY(-300px);
   }
+  
 }
 
 @media (min-width: 1281px) {
@@ -397,7 +395,7 @@ footer span {
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1280px) {
+@media (min-width: 1025px)  {
   /* CSS */
   .logo {
     margin-left: 5rem;
@@ -405,6 +403,9 @@ footer span {
   }
   .menu {
     display: none;
+  }
+  .footer-grid {
+    display: contents;
   }
 }
 
@@ -492,4 +493,22 @@ footer span {
   .now-state-img {
     margin: 39px 0 0 0;
   }
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+
+footer {
+  width: 100%;
+  max-width: 100%;
+}
+.footer-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.4rem;
+  row-gap: 0;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-size: 0.8rem;
+}
 }
