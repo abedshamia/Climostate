@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
+      name="keywords"
+      content="Weather, Country, Explore, Wind, Temperature"
+    />
+    <meta name="description" content="Weather App" />
+    <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
@@ -28,11 +33,17 @@
   </head>
   <body>
     <header class="header">
+      <a href="#" class="menu" aria-label="menu-btn"
+        ><i class="fas fa-bars"></i
+      ></a>
+      <a href="#" class="menu close" aria-label="close-btn"
+        ><i class="fas fa-times"></i
+      ></a>
+
       <nav class="main-nav">
-        <a href="#home"
+        <a href="#home" aria-label="website logo"
           ><img src="assets/img/Logo/Group 4.svg" class="logo" alt="logo"
         /></a>
-        <a href="#" class="menu"><i class="fas fa-bars"></i></a>
         <ul class="nav-list">
           <li class="nav-item">
             <a href="#home" class="nav-link">Home</a>
@@ -67,28 +78,34 @@
           </div>
           <div class="hero-images">
             <img
-              src="assets/img/Landing/Hero/hero-1.jpg"
+              src="assets/img/Landing/Hero/hero-1.webp"
               class="hero-img"
               alt="hero-img"
             />
             <img
-              src="assets/img/Landing/Hero/hero-2.jpg"
+              src="assets/img/Landing/Hero/hero-2.webp"
               class="hero-img2"
               alt="hero-img2"
             />
           </div>
         </div>
-        <hr />
         <!--features section -->
 
         <section class="features" id="features">
-          <div class="section-br">
-            <img src="assets/img/Other/Group 20.png" class="break-logo" />
+          <div class="section-br features-br">
+            <img
+              src="assets/img/Other/Group 20.png"
+              class="break-logo"
+              alt="Break"
+            />
             <h1 class="explore-text">FEATURES</h1>
           </div>
           <div class="features-icons">
             <div class="features-icon">
-              <img src="./assets/img/Landing/Features/Personal-Service.svg" />
+              <img
+                src="./assets/img/Landing/Features/Personal-Service.svg"
+                alt="Personalized Service"
+              />
               <h3>PERSONALIZED-<br />SERVICE</h3>
               <p>
                 One-to-one service<br />
@@ -97,7 +114,10 @@
               </p>
             </div>
             <div class="features-icon">
-              <img src="./assets/img/Landing/Features/search.svg" />
+              <img
+                src="./assets/img/Landing/Features/search.svg"
+                alt="Easy Search"
+              />
               <h3>SEARCH</h3>
               <p id="features-search-p">
                 Easy-to-use tools to keep<br />
@@ -106,7 +126,10 @@
               </p>
             </div>
             <div class="features-icon features-icon-responsive">
-              <img src="./assets/img/Landing/Features/Technology.svg" />
+              <img
+                src="./assets/img/Landing/Features/Technology.svg"
+                alt="Technology Driven"
+              />
               <h3>TECHNOLOGY-<br />DRIVEN</h3>
               <p>
                 We provide preferred rates,<br />
@@ -120,18 +143,24 @@
 
         <section class="Testimonials" id="testimonials">
           <div class="section-br">
-            <img src="assets/img/Other/Group 20.png" class="break-logo" />
+            <img
+              src="assets/img/Other/Group 20.png"
+              class="break-logo"
+              alt="break"
+            />
             <h1 class="explore-text">TESTIMONIALS</h1>
           </div>
           <img
             src="./assets/img/Landing/Testimonials/Vector.png"
             class="Testimonials-avater"
+            alt="Background image"
           />
           <div class="left-testimonials-sections">
             <div class="testimonial-container">
               <div class="testimonial">
                 <img
                   src="./assets/img/Landing/Testimonials/testimonial-1.png"
+                  alt="Group of happy people"
                 />
                 <p>
                   <i class="fas fa-quote-left fa-2x"></i> We were was amazed at
@@ -159,13 +188,18 @@
                 </p>
                 <img
                   src="./assets/img/Landing/Testimonials/testimonial-2.png"
+                  alt="Happy woman"
                 />
               </div>
             </div>
           </div>
         </section>
         <div class="section-br">
-          <img src="assets/img/Other/Group 20.png" class="break-logo" />
+          <img
+            src="assets/img/Other/Group 20.png"
+            class="break-logo"
+            alt="break"
+          />
           <h1 class="explore-text">EXPLORE NOW</h1>
         </div>
 
@@ -246,8 +280,12 @@
             </div>
           </div>
           <div class="buttons">
-            <button id="prev"><i class="fas fa-arrow-left"></i></button>
-            <button id="next"><i class="fas fa-arrow-right"></i></button>
+            <button id="prev" aria-label="Previous">
+              <i class="fas fa-arrow-left"></i>
+            </button>
+            <button id="next" aria-label="Next">
+              <i class="fas fa-arrow-right"></i>
+            </button>
           </div>
         </div>
       </main>
@@ -263,8 +301,8 @@
           <a class="active" href="#contact">About us</a>
           <a class="active" href="#contact">Contact us</a>
           <div class="climostate-tittle">
-            <img src="./assets/img/Other/Group 20.png" />
-            <h4>CLIMOSTATE</h4>
+            <img src="./assets/img/Other/Group 20.png" alt="colored logo" />
+            <p>CLIMOSTATE</p>
           </div>
           <span> © 2021 Climostate Inc. All rights <br />reserved.</span>
         </div>
@@ -285,9 +323,15 @@
               <i class="fab fa-twitter fa-2x"></i>
             </button>
             <div class="footer-media">
-              <a href="#"><i class="fab fa-linkedin"></i></a>
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="linkedin"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="#" aria-label="facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
             </div>
           </form>
         </div>
