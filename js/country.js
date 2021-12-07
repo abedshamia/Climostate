@@ -99,6 +99,8 @@ function displayCountryHeader(country) {
         });
     })
     .catch((err) => {
+      const text = document.querySelector(".nav-link");
+      text.textContent = "Your country is... Not here :(";
       console.log(err);
       const notFound = document.createElement("h1");
       notFound.textContent = "Country not found";
