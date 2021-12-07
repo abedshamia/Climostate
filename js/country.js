@@ -257,7 +257,7 @@ function displayWeather(city) {
           : (srcURL = "fe_sunny-o2.png");
         const dayImg = document.createElement("img");
         dayImg.classList.add("state");
-        dayImg.src = `assets/img/Country-Details/${srcURL}`;
+        dayImg.src = `./assets/img/Country-Details/${srcURL}`;
         dayWeather.appendChild(dayImg);
       });
     });
