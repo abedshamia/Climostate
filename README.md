@@ -2,22 +2,55 @@
 ![2](https://user-images.githubusercontent.com/73759748/144758790-fa813f77-4ae3-44fb-9108-672a9771f8a5.png)
 # Climostate
 
+*  [About](#about)
+*  [User Stories](#stories)
+*  [Technologies Used](#tech)
+*  [User Journey](#journey)
+*  [Features](#features)
+*  [Wireframes UI/UX](#wireframe)
+*  [Website Layout](#layout)
+*  [Live Website](#live)
+*  [API](#api)
+*  [Installation](#usage)
+*  [Team Members](#team)
 
 
-## **About Climostate** :sunrise: 
+
+## **About Climostate** :sunrise: <span id="about"></span>
 
 
--What?
+**What?**
+
 Climostate is a beautiful, simple and easy to use app that gives you the best weather forecast for any country or city in the world for three consecutive days.
 Once you enter the name of the country in the search field, it displays information about that country such as its capital, currency, and language. 
 
--Why?
+**Why?**
+
 Climostate aims to  give you an glimpse about weather help you have a better explore experience, by knowing your destination and the country you intend to visit based on the weather in that country.
 
--How?
+**How?**
+
+*Planning Phase*:
+- We defind the idea for the application and gathered content through APIs and photos that suits with our application theme.
+- Sitemap consisted of 2 pages: Landing page and the Country Details page. and Sections were planned.
+- Page Layout was planned the UX/UI Wireframe was sketched. 
+- The application then was designed on the base of the Wireframe in Figma.
+- We assessed the tasks we needed to accomplish as well as our skillsets. 
+- And finally we divided up the workload accordingly.
+
+*Development Phase*: 
+
+The team agreed on guidelines to follow during development. The technologies and guidelines that we agreed to use and follow are:
+- HTML5 language and taking advantage of the Semantic elements.  <span id="tech"></span>
+- CSS3.
+- Git & Github.
+- Making the pages responsive for 3 devices: Mobile, Tablet and Desktop.
+- Javascript (JS).
+- Local Storage.
+- API.
 
 
-## **User Stories**  :books: 
+## **User Stories**  :books: <span id="stories"></span>
  #### As a user, I can : 
 
 - see an Image for the country I'm looking for 
@@ -35,15 +68,19 @@ Climostate aims to  give you an glimpse about weather help you have a better exp
 - see the temperature of the selected city of the country I'm looking for
 - see the forecast for 3 days of the selected city inthe country I'm looking for
 
-## **User Journey**  :pencil2:
- When the user enters the Event web application home, he/she can view different sections that shows (features - testimonials - explore places)  He/She can choose the desired section to view by clicking on to its name on the navigation bar or by scrolling and then transferring to it. At the home page, she/he look up for the desired country by typing its name and click "Get Started!".
+## **User Journey**  :pencil2: <span id="journey"></span>
+ - As the user enters the Event web application home, he can view different sections that shows (Features - Testimonials - Explore places).
+ - The user can navigate to the desired section to see by clicking on to it in the navigation bar or by scrolling and going to it.
+ - The user can look up for the desired country by typing its name and click "Get Started!".
+ - The user then will be moved to the desired country page in which he was looking for.
+ - The user will see different cards about the country including a (Photo, General info, Cities and Weather state for the next 3 days for the city).
+ - Even if the user hinted about the country he is looking for, our application will try to match his hint with the expected country to be shown.
+ - if invalid input was typed, the user will simply be navigated to a page which tells him that no country found.
 
- After the user clicks on the "Get Started!" button on the home page, he will be moved to an desired country page in which he/she can view different cards about the country including its photo, general info, cities' weather state and next 3 days state for the country. 
 
 
 
-
-## **Features** :
+## **Features** :stars: <span id="features"></span>
 
 * Easy to use.
 * Displays weather forecasts in a clear and easy to understand manner.
@@ -53,53 +90,39 @@ Climostate aims to  give you an glimpse about weather help you have a better exp
 * Protect your health with air speed and temperature indicator.
 
 
-## **Wireframes UI/UX** :art: 
+## **Wireframes UI/UX** :art: <span id="wireframe"></span>
 ---
 <p float='left' align='center'>
-<img src="https://user-images.githubusercontent.com/73759748/144758393-7ffa8e59-2ca0-461b-b23a-6c2c86072932.png" alt="drawing1" width="450" />
+<img src="https://user-images.githubusercontent.com/73759748/144758393-7ffa8e59-2ca0-461b-b23a-6c2c86072932.png" alt="drawing1" width="400" />
  
-<img src="https://user-images.githubusercontent.com/73759748/144758391-2ba8cf65-1d8a-4122-b5eb-2b48ccda3762.png" alt="drawing2" width="450" />
+<img src="https://user-images.githubusercontent.com/73759748/144758391-2ba8cf65-1d8a-4122-b5eb-2b48ccda3762.png" alt="drawing2" width="400" />
 </p>
 
 
 
-## **Website layout** :iphone: 
+## **Website layout** :iphone: <span id="layout"></span>
 ---
 <p align='center'>
  
-![1](https://user-images.githubusercontent.com/73759748/144758845-0903ed1c-1f05-40cc-b939-058793cc69d0.png)
+![1](https://user-images.githubusercontent.com/73759748/144758845-0903ed1c-1f05-40cc-b939-058793cc69d0.png) 
 
 ![3](https://user-images.githubusercontent.com/73759748/144758979-dc2fc97c-1d21-410b-ab28-bb0c430e5e3b.png)
 </p>
 
-## **API documentation** :robot_face: 
+## **API documentation** :robot: <span id="api"></span>
 * [Pixaby](https://pixabay.com) for photos
 * [Rest Countries](https://restcountries.com) for countries
 * [Countries Now](https://countriesnow.space/api/v0.1/countries/cities) for cities
 * [Heroku App](https://goweather.herokuapp.com) for weather state
  
 
+## **Live Website** :tv: <span id="live"></span>
 
 
-
- 
- 
-## **Technologies** :computer: 
-
-- Git Work Flow
-- HTML5
-- CSS
-- Javascript (JS)
-- Local Storage
-- API
-
-## **Live Website** :tv: 
-
-
- our demo website [**Here**](https://gsg-cf04.github.io/Climostate/).
+You can see our demo website [**Here**](https://gsg-cf04.github.io/Climostate/).
  
 
-## Runnig the project locally :hotel:
+## Running the project locally :hotel: <span id="usage"></span>
 
 
 ```
@@ -108,7 +131,7 @@ Climostate aims to  give you an glimpse about weather help you have a better exp
 - code . 
 ```
 
-## **Team Members** :male-office-worker: 
+## **Team Members** :raising_hand: <span id="team"></span>
  
  
 
@@ -116,4 +139,6 @@ Climostate aims to  give you an glimpse about weather help you have a better exp
 * [Nebal Irheem](https://github.com/nebal96)
 * [Nabil AbuShaban](https://github.com/nabilramy)
  
-
+ 
+## **Team Leader**
+* [Sara J](https://github.com/sara219)
