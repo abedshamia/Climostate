@@ -19,6 +19,8 @@ const countryAPI = fetch(`https://restcountries.com/v3.1/name/${country}`)
     officialName.innerHTML = `${data[0].name.official}`;
     containerDiv.appendChild(officialName);
 
+    //an API displays a photo of the selected country
+
     const pixaKey = "24477339-22b8ee8a367b2cdaebd16eb69";
     const pixaAPI = fetch(
       `https://pixabay.com/api/?key=${pixaKey}&q=${common}&image_type=photo&pretty=true&imageHeight=1080&imageWidth=1920`
@@ -42,8 +44,6 @@ const countryAPI = fetch(`https://restcountries.com/v3.1/name/${country}`)
 
   });
 
-
-//an API displays a photo of the selected country
 
 
 //Countries API
