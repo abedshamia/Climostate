@@ -18,8 +18,8 @@ const countryAPI = fetch(`https://restcountries.com/v3.1/name/${country}`)
     officialName.setAttribute("id", "official-name");
     officialName.innerHTML = `${data[0].name.official}`;
     containerDiv.appendChild(officialName);
-    const heading = document.getElementsByClassName("nav-link")[0]
-heading.innerHTML = `${data[0].name.common} is here!`
+    const heading = document.getElementsByClassName("nav-link")[0];
+    heading.innerHTML = `${data[0].name.common} is here!`;
   });
 
 //Cities API
@@ -80,7 +80,6 @@ function displayCountryHeader(country) {
 
       displayCountryCities(searchedCountry);
 
-
       //Get a photo for the searchedCountry
       const pixaAPI = fetch(
         `https://pixabay.com/api/?key=${pixaKey}&q=${searchedCountry}&image_type=photo&pretty=true&imageHeight=1080&imageWidth=1920`
@@ -100,6 +99,8 @@ function displayCountryHeader(country) {
         });
     })
     .catch((err) => {
+      const text = document.querySelector(".nav-link");
+      text.textContent = "Your country is... Not here :(";
       console.log(err);
       const notFound = document.createElement("h1");
       notFound.textContent = "Country not found";
@@ -258,7 +259,7 @@ function displayWeather(city) {
           : (srcURL = "fe_sunny-o2.png");
         const dayImg = document.createElement("img");
         dayImg.classList.add("state");
-        dayImg.src = `../assets/img/Country-Details/${srcURL}`;
+        dayImg.src = `./assets/img/Country-Details/${srcURL}`;
         dayWeather.appendChild(dayImg);
       });
     });
@@ -290,4 +291,3 @@ function displayCountryCities(selectedCountry) {
     displayWeather(cityWeather);
   });
 }
-
